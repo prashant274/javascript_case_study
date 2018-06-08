@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+</head>
+<body>
+         <h2>Task Manager</h2>
+    <table border="1">
+        <tr>
+            <td>
+                Title: <input type="text" placeholder="Enter Task Name" id="taskTitle"> Due Date: <input type="date" id="dueDate">
+                <button onclick="handlers.addTask()">Add Task</button>
+            </td>
+        </tr>
+        <br>
+    </table>
+    <br>
+    <button onclick="handlers.updateStatus()">Mark Complete</button>
+    <button onclick="handlers.deleteTask()">Delete Marked</button>
+    <select onChange="handlers.filterTasks()" id="filterTasks">
+        <option value="All"> All</option>
+        <option value="Completed"> Completed</option>
+        <option value="Incompleted"> Incompleted</option>
+    </select>
+    <br>
+    <br>
+    <table hight="300px" id="taskTable" border="1">
+
+    </table>
+    <script src="./js/taskManager.js"></script>
+</body>
+</html>
